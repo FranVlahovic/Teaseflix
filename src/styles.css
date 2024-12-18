@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,11 +7,70 @@
 }
   
 :root {
---primary-color: --secondary-color: ;
+    --primary-color: #0e0e0e;
+    --secondary-color: #f7f7f7;
 }
-  
+
+html {
+    font-family: "Inter", serif;
+    font-weight: 500;
+}
+
 img {
-max-width: 100%;
-display: block;
-height: auto;
+    max-width: 100%;
+    display: block;
+    height: auto;
 }
+
+header {
+    display: flex;
+    background-color: var(--primary-color);
+    gap: 4em;
+    align-items: center;
+    padding: 1em 4em;
+}
+
+.header-logo {
+    width: 8rem;
+    cursor: pointer;
+}
+
+.header-navbar {
+    display: flex;
+    gap: 2em;
+}
+.header-navbar a, li, .profile-related a{
+    text-decoration: none;
+    list-style-type: none;
+    color: var(--secondary-color);
+}
+
+.profile-related {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 1.4em;
+}
+.profile-related img {
+    filter: invert(1);
+    cursor: pointer;
+}
+.profile {
+    display: flex;
+}
+.profile .profile-image {
+    width: 2.8em;
+}
+
+.profile-related .notification-icon {
+    width: 2em;
+}
+
+.profile-related .search-icon {
+    width: 2.5em;
+}
+
+.profile .profile-settings {
+    width: 2em;
+}
+
