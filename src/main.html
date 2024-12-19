@@ -6,6 +6,7 @@
     <title>Netflix Header</title>
 </head>
 <body>
+
     <header id="header">
         <img src="assets/icons/netflix.svg" alt="Netflix Logo" class="header-logo">
         
@@ -23,12 +24,33 @@
             <a href="#">Kids</a>
             <img src="assets/icons/bell.svg" alt="Notification Icon" class="notification-icon">
             <div class="profile">
-                <img src="assets/icons/account-circle.svg" alt="Profile Image" class="profile-image">
-                <img src="assets/icons/chevron-down.svg" alt="Profile Settings Icon" class="profile-settings">
+                <img src="assets/images/fran.png" alt="Profile Image" class="profile-image">
+                <button class="settings-btn"><img src="assets/icons/chevron-down.svg" alt="Profile Settings Icon" class="profile-settings"></button>
+            </div>
+            <div class="dropdown" id="dropdown">
+                <div class="dropdown-profile">
+                    <img src="assets/images/profile2.png" alt="Profile Image">
+                    <a>Guest</a>
+                </div>
+                <div class="dropdown-profile">
+                    <img src="assets/images/kids.png" alt="Kids Image">
+                    <a>Kids</a>
+                </div>
+        
+                <a href="#"><img class="dropdown-icon" src="assets/icons/pencil-outline.svg" alt="Manage Profiles Icon">Manage Profiles</a>
+                <a href="#"><img class="dropdown-icon" src="assets/icons/account-box-multiple.svg" alt="Transfer Profile Icon">Transfer Profile</a>
+                <a href="#"><img class="dropdown-icon" src="assets/icons/account-outline.svg" alt="Account Icon">Account</a>
+                <a href="#"><img class="dropdown-icon" src="assets/icons/help-circle-outline.svg" alt="Help Center Icon">Help Center</a>
+        
+                <div class="dropdown-sign-out">
+                    <a href="#">Sign out of Netflix</a>
+                </div>
+                
             </div>
         </div>
 
     </header>
+    
 
     <main id="main">
 

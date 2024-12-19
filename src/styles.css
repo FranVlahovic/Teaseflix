@@ -16,6 +16,10 @@ html {
     font-weight: 500;
 }
 
+body {
+    background-color: var(--primary-color);
+}
+
 img {
     max-width: 100%;
     display: block;
@@ -44,6 +48,9 @@ header {
     list-style-type: none;
     color: var(--secondary-color);
 }
+a:hover {
+    opacity: 0.85;
+}
 
 .profile-related {
     display: flex;
@@ -52,25 +59,83 @@ header {
     gap: 1.4em;
 }
 .profile-related img {
-    filter: invert(1);
     cursor: pointer;
 }
 .profile {
     display: flex;
+    position: relative;
 }
 .profile .profile-image {
     width: 2.8em;
+    border-radius: 0.35em;
 }
 
 .profile-related .notification-icon {
     width: 2em;
+    filter: invert(1);
 }
 
 .profile-related .search-icon {
     width: 2.5em;
+    filter: invert(1);
 }
 
-.profile .profile-settings {
+.profile button{
     width: 2em;
+    border: none;
+    background-color: transparent;
+    filter: invert(1);
 }
+
+.dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    width: 18rem;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1.5em 1em;
+    gap: 1em;
+    visibility: hidden;
+    transform: translateY(16em) translateX(-3.5em);
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    gap: 1.3em;
+    cursor: pointer;
+}
+
+.dropdown-profile img {
+    width: 3em;
+    border-radius: 0.5em;
+}
+.dropdown-icon {
+    width: 2.5em;
+    filter: invert(1);
+}
+.dropdown-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+}
+.dropdown-sign-out {
+    display: flex;
+    border-top: 1px solid var(--secondary-color);
+    padding-top: 1.2em;
+    width: 100%;
+    justify-content: center;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+
 
