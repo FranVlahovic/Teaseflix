@@ -1,1 +1,1 @@
-# template-wes
+NPM Publish Module Test

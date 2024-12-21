@@ -1,8 +1,11 @@
 import './styles.css';
+import { closePlayer, showPlayer, loadVideo } from './modules/player';
 
 const dropDownBtn = document.querySelector('.profile');
 const dropDownIcon = document.querySelector('.settings-btn');
 const dropDownMenu = document.querySelector('.dropdown');
+const playBtn = document.querySelectorAll('.movie-play');
+const closeTrailerBtn = document.querySelector('.close-trailer');
 
 const showDropdown = () => {
     dropDownMenu.classList.add('show');
@@ -39,5 +42,18 @@ const closeDropdown = () => {
     });
 };
 
+const btnListeners = () => {
+    playBtn.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            showPlayer();
+        });
+    });
+
+    closeTrailerBtn.addEventListener('click', () => {
+        closePlayer();
+    });
+};
+
 openDropdown();
 closeDropdown();
+btnListeners();

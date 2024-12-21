@@ -8,7 +8,7 @@
 <body>
 
     <header id="header">
-        <img src="assets/icons/netflix.svg" alt="Netflix Logo" class="header-logo">
+        <img src="assets/icons/teaseflix.png" alt="Netflix Logo" class="header-logo">
         
         <ul class="header-navbar">
             <li><a href="#">Home</a></li>
@@ -43,7 +43,7 @@
                 <a href="#"><img class="dropdown-icon" src="assets/icons/help-circle-outline.svg" alt="Help Center Icon">Help Center</a>
         
                 <div class="dropdown-sign-out">
-                    <a href="#">Sign out of Netflix</a>
+                    <a href="#">Sign out of Teaseflix</a>
                 </div>
                 
             </div>
@@ -53,6 +53,50 @@
     
 
     <main id="main">
+        <div class="slideshow-container">
+
+            <div class="movie-trailer-container">
+                <button class="close-trailer">X</button>
+                <iframe width="1280" height="720" src="https://www.youtube.com/embed/hEJnMQG9ev8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="movie-card" style="display: none;" id="1">
+                <img src="assets/images/matrix.jpg" alt="Matrix Cover" class="movie-cover">
+                <div class="movie-container">
+                    <h1 class="movie-name">The Matrix (1999)</h1>
+                    <p class="movie-description">When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.</p>
+                    <div class="movie-buttons">
+                        <button class="movie-play"><img src="assets/icons/play.svg" alt="">Play</button>
+                        <button class="movie-info"><img src="assets/icons/information-outline.svg" alt="">More Info</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie-card" id="2">
+                <img src="assets/images/madmax2.jpg" alt="Mad Max Cover" class="movie-cover">
+                <div class="movie-container">
+                    <h1 class="movie-name">Mad Max: Fury Road (2015)</h1>
+                    <p class="movie-description">In a post-apocalyptic wasteland, a woman rebels against a tyrannical ruler in search for her homeland with the aid of a group of female prisoners, a psychotic worshipper and a drifter named Max.</p>
+                    <div class="movie-buttons">
+                        <button class="movie-play"><img src="assets/icons/play.svg" alt="">Play</button>
+                        <button class="movie-info"><img src="assets/icons/information-outline.svg" alt="">More Info</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slideshow-commands">
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
+            </div>
+
+            <div class="dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
 
     </main>
 
