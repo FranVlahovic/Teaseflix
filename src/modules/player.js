@@ -1,18 +1,26 @@
-const movieTrailerContainer = document.querySelector(
-    '.movie-trailer-container',
-);
+const videoIFrame = document.querySelector('.video-frame');
+const movieInfo = document.querySelector('.movie-info-container');
 
-export const showPlayer = () => {
-    movieTrailerContainer.style.display = 'block';
+export const showPlayer = (videoUrl) => {
+    const trailerContainer = document.querySelector('.movie-trailer-container');
+    const iframe = trailerContainer.querySelector('.video-frame');
+
+    if (trailerContainer && iframe) {
+        trailerContainer.style.display = 'block';
+        iframe.src = videoUrl;
+    } else {
+        console.error('Trailer container or iframe not found');
+    }
 };
 
 export const closePlayer = () => {
-    movieTrailerContainer.style.display = 'none';
+    const trailerContainer = document.querySelector('.movie-trailer-container');
+    const iframe = trailerContainer.querySelector('.video-frame');
+
+    trailerContainer.style.display = 'none';
+    iframe.src = '';
 };
 
 export const loadVideo = (link) => {
-    movieTrailerContainer.innerHTML = `
-        <button class="close-trailer">X</button>
-        <iframe width="1280" height="720" src="${link}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    `;
+    videoIFrame.src = link;
 };
