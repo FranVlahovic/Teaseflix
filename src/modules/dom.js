@@ -1,10 +1,11 @@
 import matrix from '../assets/images/matrix.jpg';
 import madmax from '../assets/images/madmax2.jpg';
+import snowden from '../assets/images/snowden.jpg';
 import playIcon from '../assets/icons/play.svg';
 import infoIcon from '../assets/icons/information-outline.svg';
-import { closePlayer, showPlayer } from './player';
+import { closePlayer, showPlayer, showInfo } from './player';
 
-const movieCardsData = [
+export const movieCardsData = [
     {
         id: 1,
         videoUrl:
@@ -25,6 +26,17 @@ const movieCardsData = [
         plot: 'In a post-apocalyptic wasteland, a woman rebels against a tyrannical ruler in search for her homeland with the aid of a group of female prisoners, a psychotic worshipper and a drifter named Max.',
         imdbLink: 'https://www.imdb.com/title/tt1392190/?ref_=ttpl',
         imgSrc: madmax,
+    },
+    {
+        id: 3,
+        videoUrl:
+            'https://www.youtube.com/embed/QlSAiI3xMh4?si=l5HZbbOSskibVjz_',
+        title: 'Snowden (2016)',
+        director: 'Oliver Stone',
+        stars: 'Joseph Gordon-Levitt, Shailene Woodley, Melissa Leo',
+        plot: 'The NSA illegal surveillance techniques are leaked to the public by one of the agencys employees, Edward Snowden, in the form of thousands of classified documents distributed to the press.',
+        imdbLink: 'https://www.imdb.com/title/tt3774114',
+        imgSrc: snowden,
     },
 ];
 
@@ -54,13 +66,15 @@ export const renderMovieCards = () => {
             <iframe class="video-frame" width="1280" height="720" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
+        <div class="movie-info-container" style="display:none;">
+        </div>
+
         <div class="slideshow-commands">
             <a class="prev">&#10094;</a>
             <a class="next">&#10095;</a>
         </div>
     `;
 
-    // Dynamically create dots based on the movieCardsData length
     const dotsHTML = movieCardsData
         .map(() => `<span class="dot"></span>`)
         .join('');
@@ -69,13 +83,13 @@ export const renderMovieCards = () => {
         <div class="dots">${dotsHTML}</div>
     `;
 
-    // Add button event listeners after the DOM is fully updated
     btnListeners();
 };
 
 const btnListeners = () => {
     const playBtns = document.querySelectorAll('.movie-play');
     const closeTrailerBtn = document.querySelector('.close-trailer');
+    const infoBtns = document.querySelectorAll('.movie-info');
 
     playBtns.forEach((btn) => {
         btn.addEventListener('click', (event) => {
@@ -83,6 +97,13 @@ const btnListeners = () => {
                 .closest('.movie-play')
                 .getAttribute('data-video-url');
             showPlayer(videoUrl);
+        });
+    });
+
+    infoBtns.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+            const movieId = e.target.closest('.movie-card').id;
+            showInfo(movieId);
         });
     });
 

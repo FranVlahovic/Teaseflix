@@ -273,7 +273,7 @@ a:hover {
     margin-bottom: 3.1em;
 }
 
-.close-trailer {
+.close-trailer, .close-info {
     position: absolute;
     border: none;
     background-color: transparent;
@@ -284,7 +284,7 @@ a:hover {
     color:var(--secondary-color);
 }
 
-.close-trailer:hover {
+.close-trailer:hover, .close-info:hover {
     color: #E50914;
 }
 
@@ -306,4 +306,35 @@ iframe {
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
+}
+
+.movie-info-card {
+    display: flex;
+    width: 70rem;
+    flex-direction: column;
+    padding: 3em;
+    gap: 1em;
+}
+
+.movie-info-card .movie-cover {
+    height: 33rem;
+}
+
+.imdb-link img {
+    width: 3rem;
+}
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.movie-details p {
+    color: var(--secondary-color);
+}
+
+.imdb-link {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
 }
