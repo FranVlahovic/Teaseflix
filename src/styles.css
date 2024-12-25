@@ -113,7 +113,7 @@ a:hover {
     padding: 1.5em 1em;
     gap: 1em;
     visibility: hidden;
-    transform: translateY(16em) translateX(-3.5em);
+    transform: translateY(16.5em) translateX(-3.5em);
 }
 
 .dropdown a {
@@ -317,7 +317,7 @@ iframe {
 }
 
 .movie-info-card .movie-cover {
-    height: 33rem;
+    height: 30rem;
 }
 
 .imdb-link img {
@@ -331,6 +331,16 @@ iframe {
 
 .movie-details p {
     color: var(--secondary-color);
+}
+
+.movie-category {
+    color: var(--secondary-color);
+    font-weight: 400;
+    border: 2px solid var(--secondary-color);
+    border-radius: 2em;
+    padding: 0.5em;
+    width:fit-content;
+    font-size: 1em;
 }
 
 .imdb-link {

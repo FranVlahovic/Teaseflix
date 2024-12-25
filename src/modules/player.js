@@ -1,60 +1,60 @@
 import imdb from '../assets/icons/imdb.svg';
 import { movieCardsData } from './dom';
 
-const videoIFrame = document.querySelector('.video-frame');
+const getMovieById = (id) =>
+    movieCardsData.find((movie) => movie.id === parseInt(id, 10));
+
+const toggleVisibility = (element, show) => {
+    if (element) element.style.display = show ? 'block' : 'none';
+};
 
 export const showPlayer = (videoUrl) => {
     const trailerContainer = document.querySelector('.movie-trailer-container');
-    const iframe = trailerContainer.querySelector('.video-frame');
+    const iframe = trailerContainer?.querySelector('.video-frame');
 
     if (trailerContainer && iframe) {
-        trailerContainer.style.display = 'block';
+        toggleVisibility(trailerContainer, true);
         iframe.src = videoUrl;
-    } else {
-        console.error('Trailer container or iframe not found');
     }
 };
 
 export const closePlayer = () => {
     const trailerContainer = document.querySelector('.movie-trailer-container');
-    const iframe = trailerContainer.querySelector('.video-frame');
+    const iframe = trailerContainer?.querySelector('.video-frame');
 
-    trailerContainer.style.display = 'none';
-    iframe.src = '';
-};
-
-export const showInfo = (movieId) => {
-    const movie = movieCardsData.find((m) => m.id === parseInt(movieId, 10));
-    const movieInfoContainer = document.querySelector('.movie-info-container');
-
-    if (movie) {
-        movieInfoContainer.style.display = 'block';
-        movieInfoContainer.innerHTML = `
-        <div class="movie-info-card">
-            <button class="close-info">X</button>
-            <h1 class="movie-name">${movie.title}</h1>
-            <img src="${movie.imgSrc}" alt="${movie.title} Cover" class="movie-cover">
-            <div class="movie-details">
-                <p class="movie-description">${movie.plot}</p>
-                <p><strong>Director:</strong> ${movie.director}</p>
-                <p><strong>Stars:</strong> ${movie.stars}</p>
-            </div>
-            <a href="${movie.imdbLink}" class="imdb-link">
-                <img src="${imdb}" alt="IMDb Icon">
-            </a>
-        </div>
-    `;
-
-        // Close button functionality
-        const closeBtn = movieInfoContainer.querySelector('.close-info');
-        closeBtn.addEventListener('click', () => {
-            movieInfoContainer.style.display = 'none';
-        });
-    } else {
-        console.error(`Movie with ID ${movieId} not found.`); // Movie not found
+    if (trailerContainer && iframe) {
+        toggleVisibility(trailerContainer, false);
+        iframe.src = '';
     }
 };
 
-export const loadVideo = (link) => {
-    videoIFrame.src = link;
+export const showInfo = (movieId) => {
+    const movie = getMovieById(movieId);
+    const movieInfoContainer = document.querySelector('.movie-info-container');
+
+    if (movie && movieInfoContainer) {
+        movieInfoContainer.innerHTML = `
+            <div class="movie-info-card">
+                <button class="close-info">X</button>
+                <h1 class="movie-name">${movie.title}</h1>
+                <img src="${movie.imgSrc}" alt="${movie.title} Cover" class="movie-cover">
+                <div class="movie-details">
+                    <p class="movie-description">${movie.plot}</p>
+                    <p><strong>Category:</strong> ${movie.category}</p>
+                    <p><strong>Director:</strong> ${movie.director}</p>
+                    <p><strong>Stars:</strong> ${movie.stars}</p>
+                </div>
+                <a href="${movie.imdbLink}" class="imdb-link">
+                    <img src="${imdb}" alt="IMDb Icon">
+                </a>
+            </div>
+        `;
+        toggleVisibility(movieInfoContainer, true);
+
+        movieInfoContainer
+            .querySelector('.close-info')
+            ?.addEventListener('click', () => {
+                toggleVisibility(movieInfoContainer, false);
+            });
+    }
 };
