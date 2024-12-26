@@ -44,6 +44,13 @@ export const moveSlide = () => {
     });
 };
 
+export const autoMoveSlide = () => {
+    setTimeout(() => {
+        plusSlides(1);
+        autoMoveSlide();
+    }, 5000);
+};
+
 export const moveDots = () => {
     const dots = document.querySelectorAll('.dot');
     dots.forEach((dot, index) => {
@@ -51,4 +58,8 @@ export const moveDots = () => {
             currentSlide(index + 1);
         });
     });
+};
+
+export const returnToMainSlide = () => {
+    currentSlide(1);
 };

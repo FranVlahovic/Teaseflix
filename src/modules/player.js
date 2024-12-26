@@ -44,7 +44,7 @@ export const showInfo = (movieId) => {
                     <p><strong>Director:</strong> ${movie.director}</p>
                     <p><strong>Stars:</strong> ${movie.stars}</p>
                 </div>
-                <a href="${movie.imdbLink}" class="imdb-link">
+                <a href="${movie.imdbLink}" class="imdb-link" target="_blank">
                     <img src="${imdb}" alt="IMDb Icon">
                 </a>
             </div>

@@ -56,6 +56,7 @@ header {
 .header-navbar {
     display: flex;
     gap: 2em;
+    cursor: pointer;
 }
 .header-navbar a, li, .profile-related a{
     text-decoration: none;
@@ -182,7 +183,7 @@ a:hover {
     margin-left: 4em;
     padding: 2em 3em;
     width: 27%;
-    bottom: 15%;
+    bottom: 10%;
     gap: 1.2em;
     border-radius: 1em;
     background-color: var(--header-color-three);
