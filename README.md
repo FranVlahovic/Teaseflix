@@ -12,7 +12,10 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-   ![Logo](https://github.com/user-attachments/assets/650b76f8-442d-4a97-acc4-1e239f71de64)
+   ![tflix1](https://github.com/user-attachments/assets/7941da86-3ee9-437f-9969-2e6ec2aafac9)
+   ![tflix2](https://github.com/user-attachments/assets/37dc6de3-310f-48be-8219-6a4d54e4bc4c)
+   ![tflix3](https://github.com/user-attachments/assets/c262453f-4020-452f-8608-230efcc8dd4b)
+
 
   <h3 align="center">Teaseflix</h3>
 
