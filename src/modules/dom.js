@@ -157,3 +157,12 @@ export const renderMoviesList = () => {
     const mainContainer = document.getElementById('main'); // Adjust the selector to where you want it
     mainContainer.appendChild(moviesListContainer);
 };
+
+export const showNoContentPopup = () => {
+    const noContent = document.getElementById('popup');
+    noContent.style.display = 'flex';
+
+    setTimeout(() => {
+        noContent.style.display = 'none';
+    }, 3000);
+};

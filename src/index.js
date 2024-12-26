@@ -6,10 +6,13 @@ import {
     returnToMainSlide,
     autoMoveSlide,
 } from './modules/slideshow';
-import { renderMovieCards, renderMoviesList } from './modules/dom';
+import {
+    renderMovieCards,
+    renderMoviesList,
+    showNoContentPopup,
+} from './modules/dom';
 
 const slideIndex = 1;
-const originalMainContent = '';
 
 const dropDownBtn = document.querySelector('.profile');
 const dropDownIcon = document.querySelector('.settings-btn');
@@ -17,6 +20,9 @@ const dropDownMenu = document.querySelector('.dropdown');
 const logoBtn = document.querySelector('.header-logo');
 const homeBtn = document.querySelector('.home-tab');
 const moviesBtn = document.querySelector('.movies-tab');
+const popularBtn = document.querySelector('.popular-tab');
+const myListBtn = document.querySelector('.mylist-tab');
+const browseBtn = document.querySelector('.browse-tab');
 const mainContainer = document.getElementById('main');
 
 const showDropdown = () => {
@@ -55,16 +61,13 @@ const closeDropdown = () => {
 };
 
 const headerListeners = () => {
-    logoBtn.addEventListener('click', () => {
-        returnToMainSlide();
+    const noContentButtons = [moviesBtn, popularBtn, myListBtn, browseBtn];
+    noContentButtons.forEach((btn) => {
+        btn.addEventListener('click', showNoContentPopup);
     });
-    homeBtn.addEventListener('click', () => {
-        returnToMainSlide();
-    });
-    // moviesBtn.addEventListener('click', () => {
-    //     mainContainer.innerHTML = '';
-    //     renderMoviesList();
-    // });
+
+    logoBtn.addEventListener('click', returnToMainSlide);
+    homeBtn.addEventListener('click', returnToMainSlide);
 };
 
 renderMovieCards();

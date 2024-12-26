@@ -303,7 +303,11 @@ iframe {
     animation-name: fade;
     animation-duration: 1s;
 }
-  
+.fasterfade {
+    animation-name: fade;
+    animation-duration: 0.8s;
+}
+
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
@@ -348,4 +352,20 @@ iframe {
     display: flex;
     align-items: center;
     gap: 0.4em;
+}
+
+.popup {
+    position: absolute;
+    margin-left: 4em;
+    top: 10%;
+    right: 40%;
+    border-radius: 1em;
+    background-color: var(--header-color-three);
+    color: var(--secondary-color);
+}
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+    padding: 1.5em 2em;
 }
