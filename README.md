@@ -12,7 +12,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  https://github.com/user-attachments/assets/650b76f8-442d-4a97-acc4-1e239f71de64
+   ![Logo](https://github.com/user-attachments/assets/650b76f8-442d-4a97-acc4-1e239f71de64)
 
   <h3 align="center">Teaseflix</h3>
 
