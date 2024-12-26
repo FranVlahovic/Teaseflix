@@ -12,9 +12,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/FranVlahovic/Teaseflix">
-    <img src="images/logo.png" alt="Logo" width="100" height="100">
-  </a>
+  https://github.com/user-attachments/assets/650b76f8-442d-4a97-acc4-1e239f71de64
 
   <h3 align="center">Teaseflix</h3>
 
@@ -24,7 +22,7 @@
     <a href="https://github.com/FranVlahovic/Teaseflix"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://your-live-demo-link.com">View Demo</a>
+    <a href="https://franvlahovic.github.io/Teaseflix">Live</a>
     ·
     <a href="https://github.com/FranVlahovic/Teaseflix/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
@@ -37,6 +35,7 @@
 ## Table of Contents
 
 - [About The Project](#about-the-project)
+- [Gallery](#gallery)
 - [Built With](#built-with)
 - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
@@ -55,13 +54,11 @@
 ## Gallery
 
 <div align="left" class="gallery">
-  <img src="https://github.com/user-attachments/assets/163e2fc8-f61b-4b8d-8bc6-4637fdb1f551" alt="Image 1" width="220px">
-  <img src="https://github.com/user-attachments/assets/26126011-528c-4dcf-a93a-04428c420f42" alt="Image 2" width="220px">
-  <img src="https://github.com/user-attachments/assets/19fc0348-556a-48a3-b5de-51e04262865a" alt="Image 3" width="220px">
-  <img src="https://github.com/user-attachments/assets/b312ac24-9f2a-4ad1-b00b-d17c7a64cdd6" alt="Image 4" width="220px">
-  <img src="https://github.com/user-attachments/assets/ba054bcd-34a4-4cfb-94b9-2a0ece7229c4" alt="Image 5" width="220px">
-  <img src="https://github.com/user-attachments/assets/46e99ab0-a6a1-451d-8138-bce236b3d49d" alt="Image 6" width="220px">
-  <img src="https://github.com/user-attachments/assets/23a40f88-44a2-45b7-a024-d5d811ee8283" alt="Image 7" width="220px">
+  <img src="https://github.com/user-attachments/assets/08e86a6b-1957-44d0-997d-d6e39ea28800" alt="Image 1" width="300px">
+  <img src="https://github.com/user-attachments/assets/f75b4d7b-74b7-4a30-80c7-f32e1ac2d71e" alt="Image 2" width="300px">
+  <img src="https://github.com/user-attachments/assets/359189b0-97e7-4909-935c-18db44365f92" alt="Image 3" width="300px">
+  <img src="https://github.com/user-attachments/assets/2da5c64e-ce1d-4f58-b8eb-6569828dda8c" alt="Image 4" width="300px">
+  <img src="https://github.com/user-attachments/assets/adf08556-a6b5-4f03-a31c-3ee4b9631b03" alt="Image 5" width="300px">
 </div>
 
 ## Built With
