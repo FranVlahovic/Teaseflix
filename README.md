@@ -13,9 +13,9 @@
 <br />
 
 <div align="center">
-![tflix1](https://github.com/user-attachments/assets/7941da86-3ee9-437f-9969-2e6ec2aafac9)
-![tflix2](https://github.com/user-attachments/assets/37dc6de3-310f-48be-8219-6a4d54e4bc4c)
-![tflix3](https://github.com/user-attachments/assets/c262453f-4020-452f-8608-230efcc8dd4b)
+  ![tflix1](https://github.com/user-attachments/assets/7941da86-3ee9-437f-9969-2e6ec2aafac9.gif)
+  ![tflix2](https://github.com/user-attachments/assets/37dc6de3-310f-48be-8219-6a4d54e4bc4c.gif)
+  ![tflix3](https://github.com/user-attachments/assets/c262453f-4020-452f-8608-230efcc8dd4b.gif)
 
   <h3 align="center">Teaseflix</h3>
 
